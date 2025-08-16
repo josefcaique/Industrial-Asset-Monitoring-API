@@ -9,7 +9,7 @@ class SensorData(BaseModel):
     vibration: float
     energy: float
 
-@app.post("sensors/data")
+@app.post("/sensors/data")
 async def recive_sensor_data(data: SensorData):
     print(data.model_dump())
     return {"status": "recived"}
